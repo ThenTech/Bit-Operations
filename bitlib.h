@@ -9,6 +9,9 @@
 #ifndef BITLIB_H
 #define BITLIB_H
 
+#include <stdio.h>
+#include <stdlib.h>
+
 /*
 *	Define a new variable with maximum size = 64bits
 *	in range: [0x0000000000000000, 0xFFFFFFFFFFFFFFFF]
