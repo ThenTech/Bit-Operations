@@ -43,8 +43,8 @@ bit Bit_shiftRight(bit b, size_t n) {
 /*	
 *	OR 2 given bits.
 *
-*	b1	|	b2	|  out
-*  -----|-------|------
+*	b1	|	b2	|	out
+*  -------------|---------------|---------------
 *	0	|	0	|	0
 *	0	|	1	|	1
 *	1	|	0	|	1
@@ -57,8 +57,8 @@ bit Bit_OR(bit b1, bit b2) {
 /*
 *	XOR 2 given bits.
 *
-*	b1	|	b2	|  out
-*  -----|-------|------
+*	b1	|	b2	|	out
+*  -------------|---------------|---------------
 *	0	|	0	|	0
 *	0	|	1	|	1
 *	1	|	0	|	1
@@ -71,8 +71,8 @@ bit Bit_XOR(bit b1, bit b2) {
 /*
 *	AND 2 given bits.
 *
-*	b1	|	b2	|  out
-*  -----|-------|------
+*	b1	|	b2	|	out
+*  -------------|---------------|---------------
 *	0	|	0	|	0
 *	0	|	1	|	0
 *	1	|	0	|	0
@@ -194,7 +194,7 @@ bit Bit_addBitsRight(bit b, bit right, size_t n) {
 */
 bool Bit_getAndRemoveLeft(bit *b) {
 	bool r = Bit_get(*b, BIT_SIZE);
-	*b <<= 1;	// remove as in shift or zerofy?
+	*b <<= 1;
 	return r;
 }
 
@@ -203,7 +203,7 @@ bool Bit_getAndRemoveLeft(bit *b) {
 */
 bool Bit_getAndRemoveRight(bit *b) {
 	bool r = Bit_get(*b, 1);
-	*b >>= 1;	// remove as in shift or zerofy?
+	*b >>= 1;
 	return r;
 }
 
